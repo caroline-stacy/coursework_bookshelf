@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Книжная полка — О проекте</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        <span class="logo-icon">📚</span>
+        <div>
+          <span class="logo-text">Книжная полка</span>
+          <span class="logo-sub">Личная библиотека</span>
+        </div>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Все книги</a></li>
+          <li><a href="form.html">+ Добавить</a></li>
+          <li><a href="stats.html">Статистика</a></li>
+          <li><a href="about.html" class="active">О проекте</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-wrapper">
+
+    <div class="page-hero">
+      <p class="eyebrow">Документация</p>
+      <h1>О <em>проекте</em></h1>
+      <p class="subtitle">Информация о приложении, авторе и инструкция по использованию</p>
+    </div>
+
+    <div class="about-grid">
+
+      <!-- О приложении -->
+      <div class="about-card">
+        <h3>📚 О приложении</h3>
+        <p>
+          <strong>Книжная полка</strong> — это персональный каталог книг для отслеживания
+          прочитанного. Приложение позволяет вести список книг с оценками, цитатами и
+          обложками, сохраняя всё прямо в браузере без регистрации и серверов.
+        </p>
+        <br>
+        <p style="font-size:0.82rem;color:var(--ink-light);">
+          Все данные хранятся в <code>localStorage</code> вашего браузера и никуда не
+          отправляются.
+        </p>
+      </div>
+
+      <!-- Об авторе -->
+      <div class="about-card">
+        <h3>👤 Об авторе</h3>
+        <div class="info-row">
+          <span class="info-label">Имя</span>
+          <span>Балманов Кайрат</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Группа</span>
+          <span>16РПО/25 / 1 курс</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Email</span>
+          <span><a href="mailto:balmanob04@gmail.com">balmanob04@gmail.com</a></span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">GitHub</span>
+          <span><a href="https://github.com/caroline-stacy" target="_blank">github.com/caroline-stacy</a></span>
+        </div>
+      </div>
+
+      <!-- Инструкция -->
+      <div class="about-card about-full">
+        <h3>📖 Инструкция по использованию</h3>
+        <ul>
+          <li>
+            <strong>Добавить книгу</strong> — нажмите кнопку «Добавить книгу» на главной
+            или перейдите в раздел «+ Добавить». Заполните обязательные поля: название,
+            автор, жанр и статус. Вставьте URL обложки — появится предпросмотр.
+          </li>
+          <li>
+            <strong>Поиск и фильтрация</strong> — используйте строку поиска для поиска по
+            названию, автору или жанру. Кнопки-фильтры позволяют показывать только книги
+            с нужным статусом.
+          </li>
+          <li>
+            <strong>Отметить прочитанной</strong> — поставьте галочку «Прочитано» внизу
+            карточки книги. Статус обновится и сохранится автоматически.
+          </li>
+          <li>
+            <strong>Удалить книгу</strong> — нажмите кнопку ✕ в правом углу карточки.
+            Появится диалог подтверждения. Удалённые книги не восстанавливаются.
+          </li>
+          <li>
+            <strong>Статистика</strong> — в разделе «Статистика» можно увидеть распределение
+            по жанрам, рейтингам и список любимых цитат из ваших книг.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Технологии -->
+      <div class="about-card">
+        <h3>⚙️ Технологии</h3>
+        <ul>
+          <li>HTML5 — семантическая вёрстка</li>
+          <li>CSS3 — Flexbox, Grid, CSS-переменные</li>
+          <li>JavaScript ES6+ — чистый JS, без фреймворков</li>
+          <li>localStorage — хранение данных между сессиями</li>
+          <li>Google Fonts — Playfair Display, Lora, DM Mono</li>
+        </ul>
+      </div>
+
+      <!-- Структура -->
+      <div class="about-card">
+        <h3>🗂 Структура проекта</h3>
+        <p style="font-family:'DM Mono',monospace;font-size:0.75rem;line-height:2;color:var(--ink-muted);">
+          bookshelf/<br>
+          ├── index.html<br>
+          ├── form.html<br>
+          ├── about.html<br>
+          ├── stats.html<br>
+          ├── css/<br>
+          │&nbsp;&nbsp;&nbsp;└── styles.css<br>
+          └── js/<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;├── storage.js<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;├── utils.js<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;├── main.js<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;├── form.js<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;└── stats.js
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    Книжная полка &copy; 2026 &nbsp;·&nbsp; Данные хранятся локально в вашем браузере
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Книжная полка — Добавить книгу</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ==================== ШАПКА ==================== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        <span class="logo-icon">📚</span>
+        <div>
+          <span class="logo-text">Книжная полка</span>
+          <span class="logo-sub">Личная библиотека</span>
+        </div>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Все книги</a></li>
+          <li><a href="form.html" class="active">+ Добавить</a></li>
+          <li><a href="stats.html">Статистика</a></li>
+          <li><a href="about.html">О проекте</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== ФОРМА ==================== -->
+  <main class="page-wrapper">
+
+    <div class="page-hero">
+      <p class="eyebrow">Новая запись</p>
+      <h1>Добавить <em>книгу</em></h1>
+    </div>
+
+    <div class="form-container">
+      <div class="form-header">
+        <h2>Данные о книге</h2>
+        <p>Поля со звёздочкой обязательны для заполнения</p>
+      </div>
+
+      <form id="bookForm" novalidate>
+        <div class="form-body">
+
+          <!-- Название + Автор -->
+          <div class="field-row">
+            <div class="field-group">
+              <label for="title">Название <span class="required">*</span></label>
+              <input type="text" id="title" name="title" placeholder="Название книги" autocomplete="off">
+            </div>
+            <div class="field-group">
+              <label for="author">Автор <span class="required">*</span></label>
+              <input type="text" id="author" name="author" placeholder="Имя Фамилия" autocomplete="off">
+            </div>
+          </div>
+
+          <!-- Жанр + Статус -->
+          <div class="field-row">
+            <div class="field-group">
+              <label for="genre">Жанр <span class="required">*</span></label>
+              <input type="text" id="genre" name="genre" placeholder="Фантастика, Классика..." autocomplete="off">
+            </div>
+            <div class="field-group">
+              <label for="status">Статус чтения <span class="required">*</span></label>
+              <select id="status" name="status">
+                <option value="">— выберите —</option>
+                <option value="want">Хочу прочитать</option>
+                <option value="reading">Читаю сейчас</option>
+                <option value="read">Уже прочитал(а)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Рейтинг -->
+          <div class="field-group">
+            <label>Рейтинг</label>
+            <div class="star-input" role="radiogroup" aria-label="Рейтинг">
+              <input type="radio" name="rating" id="r1" value="1">
+              <label for="r1" title="1 звезда">★</label>
+              <input type="radio" name="rating" id="r2" value="2">
+              <label for="r2" title="2 звезды">★</label>
+              <input type="radio" name="rating" id="r3" value="3">
+              <label for="r3" title="3 звезды">★</label>
+              <input type="radio" name="rating" id="r4" value="4">
+              <label for="r4" title="4 звезды">★</label>
+              <input type="radio" name="rating" id="r5" value="5">
+              <label for="r5" title="5 звёзд">★</label>
+            </div>
+          </div>
+
+          <!-- Обложка -->
+          <div class="field-group">
+            <label for="coverUrl">Ссылка на обложку</label>
+            <input
+              type="url"
+              id="coverUrl"
+              name="coverUrl"
+              placeholder="https://... (URL изображения)"
+              autocomplete="off"
+            >
+            <img id="coverPreview" class="cover-preview" src="" alt="Предпросмотр обложки">
+          </div>
+
+          <!-- Цитата -->
+          <div class="field-group">
+            <label for="quote">Любимая цитата из книги</label>
+            <textarea
+              id="quote"
+              name="quote"
+              placeholder="Необязательно — любимое высказывание или отрывок..."
+            ></textarea>
+          </div>
+
+        </div><!-- /form-body -->
+
+        <!-- Кнопки -->
+        <div class="form-actions">
+          <button type="button" id="cancelBtn" class="btn btn-secondary">
+            ← На главную
+          </button>
+          <button type="submit" class="btn btn-primary">
+            ＋ Сохранить книгу
+          </button>
+        </div>
+      </form>
+    </div><!-- /form-container -->
+
+  </main>
+
+  <footer class="site-footer">
+    Книжная полка &copy; 2026 &nbsp;·&nbsp; Данные хранятся локально в вашем браузере
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>

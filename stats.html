@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Книжная полка — Статистика</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        <span class="logo-icon">📚</span>
+        <div>
+          <span class="logo-text">Книжная полка</span>
+          <span class="logo-sub">Личная библиотека</span>
+        </div>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Все книги</a></li>
+          <li><a href="form.html">+ Добавить</a></li>
+          <li><a href="stats.html" class="active">Статистика</a></li>
+          <li><a href="about.html">О проекте</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-wrapper">
+
+    <div class="page-hero">
+      <p class="eyebrow">Аналитика</p>
+      <h1>Моя <em>статистика</em></h1>
+      <p class="subtitle">Обзор вашей читательской активности</p>
+    </div>
+
+    <!-- Счётчики-карточки -->
+    <div class="stats-grid" style="margin-bottom:40px;">
+      <div class="stat-card">
+        <div class="big-number" id="statTotal">—</div>
+        <div class="stat-label">Книг всего</div>
+      </div>
+      <div class="stat-card">
+        <div class="big-number" id="statRead">—</div>
+        <div class="stat-label">Прочитано</div>
+      </div>
+      <div class="stat-card">
+        <div class="big-number" id="statReading">—</div>
+        <div class="stat-label">Читаю сейчас</div>
+      </div>
+      <div class="stat-card">
+        <div class="big-number" id="statWant">—</div>
+        <div class="stat-label">Хочу прочитать</div>
+      </div>
+      <div class="stat-card">
+        <div class="big-number" id="statAvgRating">—</div>
+        <div class="stat-label">Средний рейтинг</div>
+        <div class="stat-sub">из 5 звёзд</div>
+      </div>
+    </div>
+
+    <!-- Диаграммы -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:40px;">
+
+      <div style="background:var(--card-bg);border:1px solid rgba(28,16,8,0.08);border-radius:var(--radius-lg);padding:24px;box-shadow:var(--shadow);">
+        <h3 class="section-title">📂 По жанрам</h3>
+        <div class="bar-chart" id="genreChart">
+          <p style="color:var(--ink-light);font-style:italic;">Загрузка...</p>
+        </div>
+      </div>
+
+      <div style="background:var(--card-bg);border:1px solid rgba(28,16,8,0.08);border-radius:var(--radius-lg);padding:24px;box-shadow:var(--shadow);">
+        <h3 class="section-title">⭐ По рейтингу</h3>
+        <div class="bar-chart" id="ratingChart">
+          <p style="color:var(--ink-light);font-style:italic;">Загрузка...</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Цитаты -->
+    <div>
+      <h3 class="section-title">💬 Сохранённые цитаты</h3>
+      <div style="display:flex;flex-direction:column;gap:12px;" id="topQuotes">
+        <p style="color:var(--ink-light);font-style:italic;">Загрузка...</p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    Книжная полка &copy; 2026 &nbsp;·&nbsp; Данные хранятся локально в вашем браузере
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/stats.js"></script>
+</body>
+</html>
